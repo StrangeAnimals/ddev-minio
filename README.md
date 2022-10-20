@@ -1,14 +1,10 @@
-[![tests](https://github.com/drud/ddev-addon-template/actions/workflows/tests.yml/badge.svg)](https://github.com/drud/ddev-addon-template/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2022.svg)
+[![tests](https://github.com/drud/ddev-minio/actions/workflows/tests.yml/badge.svg)](https://github.com/drud/ddev-minio/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2022.svg)
 
-## What is ddev-addon-template?
+## TODO
 
-This repository is a template for providing [DDEV](https://ddev.readthedocs.io) addons and services.
+## What is ddev-minio?
 
-In ddev v1.19+ addons can be installed from the command line using the `ddev get` command, for example, `ddev get drud/ddev-addon-template` or `ddev get drud/ddev-drupal9-solr`.
-
-A repository like this one is the way to get started. You can create a new repo from this one by clicking the template button in the top right corner of the page.
-
-![template button](images/template-button.png)
+This repository provides a minio service to a ddev container.
 
 ## Components of the repository
 

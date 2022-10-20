@@ -1,17 +1,20 @@
 #ddev-generated
 # minio ddev template
-version: '3.6'
+version: '3.2'
+
 services:
   minio:
     container_name: ddev-${DDEV_SITENAME}-minio
-    image: busybox:stable
-    command: tail -f /dev/null
-    networks: [default, ddev_default]
-    restart: "no"
-    # These labels ensure this service is discoverable by ddev.
+    image: minio/minio:latest
+    ports:
+      - "9600:9600"
+    volumes:
+      - ./storage/minio:/data
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server --address :9600 /data
+    restart: "no" # necessary since it's failing to start sometimes
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: $DDEV_APPROOT
-
-    volumes:
-    - ".:/mnt/ddev_config"
